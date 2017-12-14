@@ -1,0 +1,28 @@
+---
+server:
+  port: 8888
+security:
+  basic:
+    enabled: true
+  user:
+    name: harish
+    password: password
+spring:
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false
+        git:
+          uri: https://github.com/harish-maram/spring-cloudconfig-us-tolls
+          search-paths:
+          - 'station*'  
+          repos:
+            perf:
+              pattern:
+                - "*/perf"
+              uri: https://github.com/harish-maram/spring-cloudconfig-us-tolls-perf
+              search-paths:
+              - 'station*'
+                               
+  
